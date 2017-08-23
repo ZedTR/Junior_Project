@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="57636302e5fa43a5b0d7e03de3b5de61" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.Applicant" Width="1.5" PointX="7.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.Application" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.AvailableJob" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.City" Width="1.5" PointX="10.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.JobApplication" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.Location" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.Profile" Width="1.5" PointX="12.125" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.QuestionList" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_Applicants_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_AvailableJobs_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_AvailableJobs_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_AvailableJobs_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.JobQuestions" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.PreAppQuestion" Width="1.5" PointX="9.75" PointY="6.625" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.AnswerTable" Width="1.5" PointX="5.375" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_Questions_Answers" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_Questions_Application" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01Model.PreAppAnswerTable" Width="1.5" PointX="7.5" PointY="6.625" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_AppId_To_Application" />
+        <AssociationConnector Association="DB_9E5950_aes01Model.FK_QuestionID_To_Question" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

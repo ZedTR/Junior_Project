@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WcfAESJobs.Client.WebService.Job_Application>
+
+@{
+    ViewBag.Title = "PhoneScreen";
+}
+
+<h2>Phone Screening</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.ActionLink("Conduct Phone Interview", "Edit", new { id=item.ID },new{@class="btn btn-default btn-sm"})
+        </td>
+    </tr>
+}
+
+</table>

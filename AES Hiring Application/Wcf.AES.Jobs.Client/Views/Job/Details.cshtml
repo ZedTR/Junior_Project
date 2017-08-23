@@ -1,0 +1,87 @@
+﻿@model WcfAESJobs.Client.WebService.JobTemplates
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Job Template</h2>
+
+
+<div>
+    <h4>Job Details</h4>
+    
+    <hr />
+    
+    <dl class="dl-horizontal">
+        <dt>
+            Job Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job_Title) <br /> <br />
+        </dd>
+        @*<dt>
+            Job ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job_ID) <br /> <br />
+        </dd>*@
+        <dt>
+            Job Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job_Description) <br /> <br />
+        </dd>
+        <dt>
+            Job Qualifications
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job_Qualifications) <br/> <br/>
+        </dd>
+
+        
+
+
+            <tr>
+                <dt>
+                    Job Questions
+                </dt>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Job_Questions)
+            { 
+                    <dd>
+                        @Html.DisplayFor(modelItem => item.FullQuestion) 
+                    </dd>   
+            }
+        <br />
+        <br />
+
+        <dt>
+
+        </dt>
+        <dd>
+            <p>
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })&nbsp;
+                @Html.ActionLink("Edit Posting", "Edit", new { id = Model.Job_ID }, new { @class = "btn btn-default" })&nbsp;
+                @Html.ActionLink("Edit Questions", "AddQuestionToJobByForm", "Question", new { id = Model.Job_ID }, new { @class = "btn btn-default" })
+                
+            </p>
+            <div>
+               @* @Html.ActionLink("Back to previous page", null, null, null, new { href = Request.UrlReferrer })*@
+            </div>
+        </dd>
+        
+
+
+    </dl>
+    
+</div>
+
+
+
+

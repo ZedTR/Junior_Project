@@ -1,0 +1,30 @@
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.dll.config
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.dll
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.pdb
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.dll
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.xml
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\WcfAESJobsService.csprojResolveAssemblyReference.cache
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\Wcf.AES.Jobs.Service.dll
+C:\oitbarz\AES Jobs\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\Wcf.AES.Jobs.Service.pdb
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.dll.config
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.dll
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.pdb
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.dll
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.xml
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\WcfAESJobsService.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\Wcf.AES.Jobs.Service.dll
+C:\Users\Ryan\Desktop\316 Project\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\Wcf.AES.Jobs.Service.pdb
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.dll.config
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.dll
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\Wcf.AES.Jobs.Service.pdb
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.dll
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.xml
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\WcfAESJobsService.csprojResolveAssemblyReference.cache
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\Wcf.AES.Jobs.Service.dll
+C:\oitbarz\AES Jobs - FeatureBranch\Production-branch\AES Hiring Application\Wcf.AES.Jobs.Service\obj\Debug\Wcf.AES.Jobs.Service.pdb

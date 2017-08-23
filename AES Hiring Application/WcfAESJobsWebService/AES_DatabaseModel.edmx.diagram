@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fafb1a4aac1b40c3964f9b9cb5b881b4" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.AnswerTable" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.ApplicantTable" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.ApplicationTable" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.AvailableJob" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.City" Width="1.5" PointX="12" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.JobApplication" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.Location" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.Profile" Width="1.5" PointX="10.375" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_9E5950_aes01DataModel.QuestionList" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.FK_Questions_Answers" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.FK_Questions_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.FK_Applicants_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.FK_AvailableJobs_Application" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.FK_AvailableJobs_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.FK_AvailableJobs_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_9E5950_aes01DataModel.JobQuestions" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

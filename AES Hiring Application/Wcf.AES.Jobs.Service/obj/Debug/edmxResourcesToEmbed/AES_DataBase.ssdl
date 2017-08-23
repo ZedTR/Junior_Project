@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9E5950_aes01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AnswerTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="Answer" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Applicant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOB" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobID" Type="int" Nullable="false" />
+    <Property Name="ApplicantID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AvailableJobs">
+    <Key>
+      <PropertyRef Name="PostingID" />
+    </Key>
+    <Property Name="PostingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocationID" Type="int" Nullable="false" />
+    <Property Name="JobID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobApplications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Qualifications" Type="text" />
+  </EntityType>
+  <EntityType Name="JobQuestions">
+    <Key>
+      <PropertyRef Name="JobID" />
+      <PropertyRef Name="QuestionID" />
+    </Key>
+    <Property Name="JobID" Type="int" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PreAppAnswerTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+    <Property Name="Answer" Type="text" />
+  </EntityType>
+  <EntityType Name="PreAppQuestions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Question" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" />
+    <Property Name="FirstName" Type="varchar" MaxLength="255" />
+    <Property Name="Age" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="QuestionList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Question" Type="text" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AppId_To_Application">
+    <End Role="Application" Type="Self.Application" Multiplicity="1" />
+    <End Role="PreAppAnswerTable" Type="Self.PreAppAnswerTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Application">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PreAppAnswerTable">
+        <PropertyRef Name="ApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Applicants_Application">
+    <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applicant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvailableJobs_Application">
+    <End Role="AvailableJobs" Type="Self.AvailableJobs" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AvailableJobs">
+        <PropertyRef Name="PostingID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvailableJobs_ToTable">
+    <End Role="Locations" Type="Self.Locations" Multiplicity="1" />
+    <End Role="AvailableJobs" Type="Self.AvailableJobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AvailableJobs">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvailableJobs_ToTable_1">
+    <End Role="JobApplications" Type="Self.JobApplications" Multiplicity="1" />
+    <End Role="AvailableJobs" Type="Self.AvailableJobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobApplications">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AvailableJobs">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobQuestions_ToJob">
+    <End Role="JobApplications" Type="Self.JobApplications" Multiplicity="1" />
+    <End Role="JobQuestions" Type="Self.JobQuestions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobApplications">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobQuestions">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobQuestions_ToQuestion">
+    <End Role="QuestionList" Type="Self.QuestionList" Multiplicity="1" />
+    <End Role="JobQuestions" Type="Self.JobQuestions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuestionList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobQuestions">
+        <PropertyRef Name="QuestionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuestionID_To_Question">
+    <End Role="PreAppQuestions" Type="Self.PreAppQuestions" Multiplicity="1" />
+    <End Role="PreAppAnswerTable" Type="Self.PreAppAnswerTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreAppQuestions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PreAppAnswerTable">
+        <PropertyRef Name="QuestionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Questions_Answers">
+    <End Role="QuestionList" Type="Self.QuestionList" Multiplicity="1" />
+    <End Role="AnswerTable" Type="Self.AnswerTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuestionList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AnswerTable">
+        <PropertyRef Name="QuestionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Questions_Application">
+    <End Role="Application" Type="Self.Application" Multiplicity="1" />
+    <End Role="AnswerTable" Type="Self.AnswerTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Application">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AnswerTable">
+        <PropertyRef Name="ApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_9E5950_aes01ModelStoreContainer">
+    <EntitySet Name="AnswerTable" EntityType="Self.AnswerTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AvailableJobs" EntityType="Self.AvailableJobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobApplications" EntityType="Self.JobApplications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobQuestions" EntityType="Self.JobQuestions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreAppAnswerTable" EntityType="Self.PreAppAnswerTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreAppQuestions" EntityType="Self.PreAppQuestions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Profiles" EntityType="Self.Profiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuestionList" EntityType="Self.QuestionList" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AppId_To_Application" Association="Self.FK_AppId_To_Application">
+      <End Role="Application" EntitySet="Application" />
+      <End Role="PreAppAnswerTable" EntitySet="PreAppAnswerTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Applicants_Application" Association="Self.FK_Applicants_Application">
+      <End Role="Applicant" EntitySet="Applicant" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvailableJobs_Application" Association="Self.FK_AvailableJobs_Application">
+      <End Role="AvailableJobs" EntitySet="AvailableJobs" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvailableJobs_ToTable" Association="Self.FK_AvailableJobs_ToTable">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="AvailableJobs" EntitySet="AvailableJobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvailableJobs_ToTable_1" Association="Self.FK_AvailableJobs_ToTable_1">
+      <End Role="JobApplications" EntitySet="JobApplications" />
+      <End Role="AvailableJobs" EntitySet="AvailableJobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobQuestions_ToJob" Association="Self.FK_JobQuestions_ToJob">
+      <End Role="JobApplications" EntitySet="JobApplications" />
+      <End Role="JobQuestions" EntitySet="JobQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobQuestions_ToQuestion" Association="Self.FK_JobQuestions_ToQuestion">
+      <End Role="QuestionList" EntitySet="QuestionList" />
+      <End Role="JobQuestions" EntitySet="JobQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuestionID_To_Question" Association="Self.FK_QuestionID_To_Question">
+      <End Role="PreAppQuestions" EntitySet="PreAppQuestions" />
+      <End Role="PreAppAnswerTable" EntitySet="PreAppAnswerTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Questions_Answers" Association="Self.FK_Questions_Answers">
+      <End Role="QuestionList" EntitySet="QuestionList" />
+      <End Role="AnswerTable" EntitySet="AnswerTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Questions_Application" Association="Self.FK_Questions_Application">
+      <End Role="Application" EntitySet="Application" />
+      <End Role="AnswerTable" EntitySet="AnswerTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
